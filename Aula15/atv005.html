@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete</title>
+    <link rel="stylesheet" href="atv005.css">
+</head>
+<body>
+    <header>
+        <h1>Lanchonte Biru-Biru</h1>
+    </header>
+    <section>
+        <div id="menu">
+            <h3>Comidas</h3>
+            <ol>
+                <li>Hamburger</li>
+                <li>Lasanha</li>
+                <li>Bolo</li>
+                <li>Sopa</li>
+                <li>Pizza</li>
+            </ol>
+            <h3>Bebidas</h3>
+            <ol>
+                <li>Suco de caju</li>
+                <li>Suco de manga</li>
+                <li>Água</li>
+                <li>Refrigerante  Cola</li>
+            </ol>
+            <p>Qual a sua comida?</p>
+            <input type="number" name="txtn" id="comida" min="1" max="5">
+            <p>Qual a sua bebida?</p>
+            <input type="number" name="txtb" id="bebida" min="1" max="4"><br>
+            <input type="button" value="Gerar Nota" onclick="gerar()" id="butão">
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+    <footer>
+        <p>&copy;HygorProjects</p>
+    </footer>
+    <script src="atv005.js"></script>
+</body>
+</html>

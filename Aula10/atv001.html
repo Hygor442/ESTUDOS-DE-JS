@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de DOM</title>
+    <style>
+        body{
+            color: white;
+            background: rgb(247, 225, 187);
+            font: normal 16px Arial;
+        }
+        .box{
+            border: 2px solid black;
+            text-align: center;
+            height: 325px;
+            width: 250px;
+            margin: 0 auto;
+            background: darkcyan;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>
+            <h2>Salário Atual:</h2>
+            <input type="number" name="txtn1" id="txtn1">
+        </div>
+        <div>
+            <h2>Nome:</h2>
+            <input type="text" name="txt" id="nome">
+        </div>
+        <div>
+            <h2>Reajuste:</h2>
+            <div id="res"></div>
+        </div>
+        <input type="button" value="calcular" onclick="rever()">
+    </div>
+    <script>
+        function rever() {
+            var txtn1 = window.document.getElementById('txtn1')//salario antigo
+            var nome = window.document.getElementById('nome')
+            var res = window.document.getElementById('res')
+            var no = String(nome.value)
+            var n = Number(txtn1.value)
+            var s = n + (n + 1000/25) //novo salario
+            res.innerHTML = `${no} seu salario que era de R$${n} com o reajuste passou a ser R$${s} `             
+        }
+    </script>
+</body>
+</html>

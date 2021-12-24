@@ -1,0 +1,28 @@
+body{
+    background: chocolate;
+    font:normal 16px Arial;
+}
+header{
+    text-align: center;
+    color: white;
+}
+#menu{
+    border-radius: 5px 5px 0 0 ;
+}
+#menu,#res{
+    background: rgba(191, 154, 128, 0.51);
+    padding: 10px;
+    color: white;
+    width: 500px;
+    margin: 0 auto;
+}
+#res{
+    border-radius: 0 0 5px 5px;
+}
+#butão{
+    margin-top: 10px;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+}
