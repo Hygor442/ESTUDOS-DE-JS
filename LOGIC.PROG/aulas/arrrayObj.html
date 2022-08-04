@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="res"></div>
+    <script>
+        //pra aparecer um abaixo do outro sempre vai precisar de um loop;
+        var produtos = [
+        {'nome': 'caneta','preço':'2'},
+        {'nome': 'livro','preço':'15'},
+        {'nome': 'lapis','preço':'3'}];
+        var msg = "";
+        for(var i = 0; i < produtos.length; i++){
+            console.log(produtos[i].nome);
+            msg += `<h2>Produto: ${produtos[i].nome}</h2> <br> <p>Preço: R$ ${produtos[i].preço}</p>`
+        }
+        document.getElementById('res').innerHTML= msg;
+    </script>
+</body>
+</html>

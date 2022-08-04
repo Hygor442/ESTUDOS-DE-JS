@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" name="txtN" id="n1" placeholder="valor da casa">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <input type="button" value="Limpar" onclick="limpar()">
+        <div id="res"></div>
+    </div>
+
+    <script>
+        var res = document.getElementById('res');
+        function calcular(){
+            var n1 = parseInt(document.getElementById('n1').value);
+            for(var i = 1; i<=10; i++){
+                res.innerHTML += (`${n1} X ${i} = ${n1*i} <br>`);
+            }
+        }
+        function limpar(){
+            res.innerHTML = ''
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo de exemplo</h1>
+    <p id="paragrafo">Paragrafo de exemplo</p>
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <ul id="lista2">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <script>
+        //querySelectorAll => pega uma lista
+        //querySelector => pega o primeiro item
+        var listaItens = document.getElementsByClassName('item');
+        console.log(listaItens);
+        var itensQuerry = document.querySelectorAll("#lista2 li");
+        console.log(itensQuerry);
+
+    </script>
+</body>
+</html>

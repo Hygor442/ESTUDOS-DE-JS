@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Titulo de exemplo</h1>
+    <h2 id="subtitle">Segundo Titulo</h2>
+    <p id="paragrafo">Paragrafo de exemplo</p>
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <script>
+        //selecione o elemento
+        var title = document.querySelector('#title');
+        var subtitle = document.querySelector('#subtitle');
+        console.log(title);
+        console.log(subtitle);
+        //innerHTML
+        title.innerHTML = 'Texto alterado';
+        //textContent => mais ultilizada
+        subtitle.textContent = 'Mudando a cara'
+    </script>
+</body>
+</html>

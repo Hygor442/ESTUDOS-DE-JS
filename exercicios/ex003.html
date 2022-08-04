@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        .menu{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        .box{
+            background: goldenrod;
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .box .barra{
+            width: 80px;
+            height: 10px;
+            padding: 1px;
+            border-radius: 8px;
+            background: black;
+            position: absolute;
+        }
+        .barra.dir{
+            margin-bottom: 50px;
+        }
+        .barra.esq{
+            margin-top: 50px;
+        }
+        
+        .box .barra.center.active{
+            display:none;
+        }
+        .box .barra.esq.active{
+            transform: rotate(45deg);
+            margin: 0;
+        }
+        .box .barra.dir.active{
+            transform: rotate(-45deg);
+            margin: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="#">LinkA</a>
+        <a href="#">LinkB</a>
+    </div>
+    <div class="box">
+        <div class="barra esq"></div>
+        <div class="barra center"></div>
+        <div class="barra dir"></div>
+    </div>
+    <script>
+        const btn = document.querySelector(".box");
+        const brrCent = document.querySelector(".barra.center");
+        const brrEsq = document.querySelector(".barra.esq");
+        const brrDir = document.querySelector(".barra.dir");
+        const menu = document.querySelector(".menu");
+
+        function toggle(e){
+            if(menu.classList.contains("show")){
+                menu.classList.remove("show");
+                brrDir.classList.remove("active");
+                brrCent.classList.remove("active");
+                brrEsq.classList.remove("active");
+            }
+            else{
+                menu.classList.add("show");
+                brrDir.classList.add("active")
+                brrCent.classList.add("active")
+                brrEsq.classList.add("active")
+            }
+        }
+        btn.addEventListener("click", toggle, false);
+    </script>
+</body>
+</html>

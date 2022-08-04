@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log.Prog</title>
+    <style>
+        .valores{
+            width: 500px;
+            height: 150px;
+            background: rgb(83, 79, 79);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        input{
+            padding: 0.5rem;
+            margin: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="valores">
+        <input type="button" value="Soma (+)" onclick="soma()">
+        <input type="button" value="Subtração (-)" onclick="sub()">
+        <input type="button" value="Multiplacação (X)" onclick="mult()">
+        <input type="button" value="Divisão (/)" onclick="div()">
+    </div>
+    <div id="res"></div>
+
+    <script>
+        var n1 = parseFloat(prompt('Digite um numero:'));
+        resultado();
+
+        function resultado(){
+            var res = document.getElementById('res');
+            res.innerHTML = n1
+        };
+
+        function soma(){
+            var n2 = parseFloat(prompt('Digite um valor:'));
+            n1 += n2;
+            resultado();
+        }
+        function sub(){
+            var n2 = parseFloat(prompt('Digite um valor:'));
+            n1 -= n2;
+            resultado();
+        }
+        function mult(){
+            var n2 = parseFloat(prompt('Digite um valor:'));
+            n1 *= n2;
+            resultado();
+        }
+        function div(){
+            var n2 = parseFloat(prompt('Digite um valor:'));
+            n1 /= n2;
+            resultado();
+        }
+    </script>
+</body>
+</html>

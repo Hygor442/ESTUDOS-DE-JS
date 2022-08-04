@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        ! => não(not)
+        && => e(and)
+        || => ou(or) 
+        */
+
+        var nota1 = prompt('Valor da 1º nota:');
+        var nota2 = prompt('Valor da 2º nota:');
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+        var media = (nota1+nota2)/2; 
+        if(media > 5){
+            alert('Aprovado');
+        } else{
+            if(media <= 5 || nota1 || nota2 == 0){
+            alert('Reprovado');
+            }
+        }
+        
+    </script>
+</body>
+</html>

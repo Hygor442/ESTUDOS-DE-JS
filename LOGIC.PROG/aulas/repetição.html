@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //enquanto (while);
+        //do while, o 'do' faz com que o codigo seja executado pelo menos uma vez;
+
+        //loop for(var, cond, incre)
+
+        /*
+        var num = prompt('Digite um número:');
+        num = parseInt(num);
+        var ind = 11;
+
+        /*
+        while(ind <= 10){
+            document.write(`${num} x ${ind} = ${(num * ind)} <br>`);
+            ind = ind+1;
+        }
+        document.write('Acabou');
+        */
+        
+        /*for(var i=1; i<=10; i++){
+            document.write(`${num} x ${i} = ${(num * i)} <br>`);
+        }
+        document.write('Acabou')
+        */
+
+        /*var num=parseInt(prompt('Digite um valor:'));
+        for(var i=1; i<=50;i++){
+            document.write(`${num} X ${i} = ${num*i}<br>`);
+
+            if(i%10 == 0){
+                document.write('<hr>');
+            }
+        }
+        */
+
+        var ano = 1004;
+        while(ano <= 2022){
+            if(!(ano % 100 ==0) || (ano % 400 ==0)){
+                document.write(`${ano} <br>`);
+            }
+            ano  += 4;
+        }
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="verificar pelo alert" onclick="verificarAlert()">
+    <input type="button" value="verificar pela saida" onclick="verificarRes()">
+    <div id="res"></div>
+
+    <script>
+        function verificarAlert(){
+            var larg = parseFloat(prompt('digite a largura'));  
+            var alt = parseFloat(prompt('digite a altura'));
+            try{
+                var area = calcular(larg,alt);
+            }catch(e){
+                area = e
+            }
+            alert(`${area}`);
+        }
+
+        function verificarRes(){
+            var larg = parseFloat(prompt('digite a largura'));  
+            var alt = parseFloat(prompt('digite a altura'));
+            try{
+                var area = calcular(larg,alt);
+            }catch(e){
+                area = e;
+            }
+            document.getElementById('res').innerHTML = (`O valor da área é ${area}`);
+        }
+
+        verificarAlert();
+
+        function calcular(l, a){
+            if(l === undefined||a===undefined){
+                throw new Error('INFORME OS VALORES');
+            }
+            if(isNaN(l)||isNaN(a)){
+                throw new Error('APENAS NÚMEROS');
+            }
+            return l * a;
+        }
+    </script>
+</body>
+</html>

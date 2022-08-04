@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //clearTimeout
+        var x = 0;
+        var myTime = setTimeout(()=>{ //encapsular o setTimeout em uma variavel para ser comparda
+            console.log("O x é 0");
+        },1500);
+        x=11
+        if(x <= 10){
+            clearTimeout(myTime);
+            console.log("O x ainda não chegou no 10")
+        } else{
+            console.log('O x chegou no 10')
+        }
+        //clearSetInterval
+        var myInterval = setInterval(()=>{
+            console.log("Imprimindo interval");
+        },500);
+        setTimeout(()=>{
+            console.log("Não precisamos mais repitir!");
+            clearInterval(myInterval);
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .area{
+            height: 350px;
+            width: 350px;
+            background: rgb(235, 72, 72);
+
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        .card-comida, .card-bebida{
+            width: 150px;
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-comida li, .card-bebida li{
+            list-style: none;
+        }
+        .card-comida input, .card-bebida input{
+            width: 5rem;
+            text-align: center;
+            padding: 0.3rem;
+            margin: .2rem;
+        }
+        .card-bebida{
+            margin-top: 4rem;
+        }
+        .card-comida label, .card-bebida label{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .pedido{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem;
+        }
+        .pedido input{
+            padding: 1rem;
+            font-weight: bold;
+            margin-left: 1rem;
+        }
+        #res{
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 1rem;
+            text-align: center;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <div class="card-comida">
+            <ul>
+                <li><input type="button" value="Hambuguer" onclick="pedir('hambuguer')"><label for="">R$ 10</label></li> 
+                <li><input type="button" value="Pizza" onclick="pedir('pizza')"><label for="">R$ 25,00</label></li>
+                <li><input type="button" value="Sopa" onclick="pedir('sopa')"><label for="">R$ 15,00</label></li>
+            </ul>
+        </div>
+        <div class="card-bebida">
+            <ul>
+                <li><input type="button" value="Suco" onclick="pedir('suco')"><label for="">R$ 5,00</label></li>
+                <li><input type="button" value="Refrigerente" onclick="pedir('refrigerante')"><label for="">R$ 8,00</label></li>
+                <li><input type="button" value="Água" onclick="pedir('água')"><label for="">R$ 2,00</label></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pedido">
+         <input type="button" value="Fechar pedido" onclick="pedido()">
+         <input type="button" value="Novo pedido" onclick="limpar()">
+    </div>
+    <div id="res"></div>
+    <div id="nota"></div>
+
+    <script>
+        var valor =  0;
+        var notaImpressa = document.getElementById('nota');
+        var res = document.getElementById('res');
+        var notaItens = [];
+
+
+        function limpar(){
+            valor = 0;
+            res.innerHTML = ' ';
+            res.style.background = 'white';
+            res.style.borderRadius = '0'
+            res.style.fontFamily = 'Arial';
+            res.style.fontWeight = 'normal';
+        }
+
+        function nota(){
+            notaImpressa.innerHTML = notaItens.push(pedir);
+            notaImpressa.style.width = '200px';
+            notaImpressa.style.height = '200px';
+            notaImpressa.style.background = 'blue';
+        }
+
+        function tela(){
+            res.innerHTML = `Seu pedido está dando: R$ ${valor}`;
+        }
+        function pedir(opções){
+            switch(opções){
+                case 'hambuguer':
+                    valor += 10.0;
+                    tela();
+                break;
+                case 'pizza':
+                    valor += 25.0;
+                    tela();
+                break;
+                case 'sopa':
+                    valor += 15.0;
+                    tela();
+                break;
+
+                case 'suco':
+                    valor += 5.0;
+                    tela();
+                break;
+                case 'refrigerante':
+                    valor += 8.0;
+                    tela();
+                break;
+                case 'água':
+                    valor += 2.0;
+                    tela();
+                break;
+            }
+        }
+        function pedido(){
+            res.innerHTML = `Seu pedido deu R$ ${valor}`;
+            res.style.background = 'green';
+            res.style.borderRadius = '10px'
+            res.style.fontFamily = 'Arial';
+            res.style.fontWeight = 'bold';
+
+            var resposta = prompt('Deseja remover algum pedido?');
+            if (resposta == 'sim'){
+                var remoção = parseInt(prompt(`Qual dos itens:
+                1 - Hambuguer
+                2 - Pizza
+                3 - Sopa
+                4 - Suco
+                5 - Refrigerante
+                6 - Água
+                `));
+                switch (remoção){
+                    case 1:
+                        valor -= 10;
+                        tela()
+                    break;
+                    case 2:
+                        valor -= 25;
+                        tela()
+                    break;
+                    case 3:
+                        valor -= 15;
+                        tela()
+                    break;
+                    case 4:
+                        valor -= 5;
+                        tela()
+                    break;
+                    case 5:
+                        valor -= 8;
+                        tela()
+                    break;
+                    case 6:
+                        valor -= 2;
+                        tela()
+                    break;
+                }
+            }else if(resposta == 'não'){
+                alert('Obrigado pela compra!')   
+            }   
+        }
+    </script>
+</body>
+</html>

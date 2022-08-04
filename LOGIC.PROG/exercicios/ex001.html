@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelamento</title>
+    <style>
+        .conteiner{
+            width: 350px;
+            height: 250px;
+            border-radius: 5px;
+            background: rgb(253, 166, 156);
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            text-align: center;
+        }
+        #ver{
+            margin-top: 1rem;
+            padding: 10px 15px;
+        }
+        #res{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner" id="conteiner">
+        <label for="#">Valor da compra:</label>
+        <input type="number" name="txtc" id="compra" min="1"> <br>
+        <label for="#">Parcela:</label>
+        <input type="number" name="txtp" id="parcela" max="10" min="2">
+
+        <input type="button" value="Valor Final" id="ver" onclick="finalizarCompra()">
+    </div>
+    <div id="res"></div>
+
+    <script>
+        function finalizarCompra(){
+            var valor = parseFloat(document.getElementById('compra').value);
+            var parcela = parseInt(document.getElementById('parcela').value);
+            var valorFinal = calculo(valor, parcela);
+
+            var box = document.getElementById('conteiner');
+            box.style.borderRadius = '5px 5px 0 0';
+            var res = document.getElementById('res');
+            res.style.width = '350px';
+            res.style.height = '100px';
+            res.style.background = 'rgb(253, 166, 156)';
+            res.style.borderRadius = '0 0 5px 5px';
+            res.style.margin = '0 auto';
+            res.style.display = 'flex';
+            res.style.justifyContent = 'center';
+            res.style.alignItems = 'center';
+            res.style.flexDirection = 'colunm';
+
+            res.innerHTML = `
+            Valor da compra: R$ ${valor}<br> 
+            Parcelada em: ${parcela}X<br>
+             Mensalidade : R$ ${valorFinal.toFixed(2)}`;
+        }
+        
+        function calculo(c,p){
+            return c/p;
+        }
+
+    </script>
+</body>
+</html>

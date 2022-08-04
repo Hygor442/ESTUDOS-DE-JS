@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dissecando uma variavel</title>
+</head>
+<body>
+    <input type="text" name="txt" id="text" placeholder="Digite algo">
+    <button id="btn">Verificar</button>
+    <div id="res">
+
+    </div>
+
+    <script>
+        let text = document.querySelector("#text");
+        let btn = document.querySelector("#btn");
+        let res = document.querySelector("#res");
+
+        btn.addEventListener("click", function(){
+            //vai pegar o valor
+            const textValue = text.value;
+            //vai ver se há espaços
+            const verificaEspaco = (str) => str.indexOf(' ') >= 0;
+            console.log(verificaEspaco);
+            //vai ver se é numerico
+            const numero = function isNumber(str){
+                 return !isNaN(str);
+            }
+            //vai ver se é alfabetico
+            const alfabetico = function isAlpha(str){
+                return isNaN(str);
+            }
+            //vai ver se é alphanumerico
+            const alfaNumerico = function alphaNum(str){
+                let isNum = !isNaN(str);
+                let notIsNum = isNaN(str);
+                
+                if(isNum === false && notIsNum === true){
+                    return true
+                }
+                else{
+                    return false;
+                }
+            }
+            
+            res.innerHTML = `
+            O tipo primitivo desse valor é ${typeof textValue} <br>
+            Possui espaços? ${verificaEspaco(textValue)}
+            <br>
+            É numerico? ${numero(textValue)}
+            <br>
+            É alfabetico? ${alfabetico(textValue)}
+            <br>
+            É alphanúmerico? ${alfaNumerico(textValue)}
+            `;            
+        });
+    </script>
+</body>
+</html>

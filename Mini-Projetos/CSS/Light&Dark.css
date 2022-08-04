@@ -1,0 +1,55 @@
+.theme-light{
+    --bg-color:#fff;
+    --text-color:#696969;
+    --input-text-color:#fff;
+    --input-bg-color:rgb(151, 0, 201);
+}
+.theme-dark{
+    --bg-color:#696969;
+    --text-color:#fff;
+    --input-text-color:rgb(151, 0, 201);
+    --input-bg-color:#fff;
+}
+
+body{
+    font-family: sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+h1{
+    text-align: center;
+}
+
+.box-checked{
+    width: 150px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    background-color: var(--input-bg-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: var(--input-text-color);
+    margin: 16px 10px;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}

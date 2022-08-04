@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="produtos"></div>
+    <script>
+        var estoque = ['caneta', 'lapis','tesoura','caderno','borracha'];
+        estoque.push('cartolina', 'régua')
+        var produtos = document.querySelector('#produtos');
+        var msg = '';
+        for(var i = 0; i < estoque.length; i++){
+            msg += `Produto ${i+1}: ${estoque[i]}<br>`
+        };
+        produtos.innerHTML = msg;
+        
+    </script>
+</body>
+</html>

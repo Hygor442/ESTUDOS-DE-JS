@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+
+    <script>
+        /*var nota = prompt('Nota:');
+        if(nota > 5){
+            alert('Parabens, você passou');
+        } else {
+            alert('Recusado!')
+        }*/
+
+        /*
+        //user
+        var j1 = prompt('Digite o 1º valor:');
+        j1 = parseInt(j1);
+        var j2 = prompt('Digite o 2º valor:');
+        j2 = parseInt(j2);
+        var vencerdor = ''
+        //roleta
+        var sort = parseInt(Math.random()*2);
+        //maior e menor 
+        var maior = j1;
+        if(j2 > maior){
+            maior = j2;
+        }
+        var menor = j1;
+        if(j2 < menor){
+            menor = j2;
+        }
+        //seleção
+        if (sort == 0){
+            vencerdor = menor;
+        } else if(sort == 1){
+            vencerdor = maior;
+        }
+        //resposta
+        if(j1 == j2){
+            alert('Empate');
+        }else {
+            alert(`O maior valor é ${maior} e menor é ${menor}, o vencerdor é ${vencerdor}`);
+        }
+        */
+        
+        var user = prompt
+        (`
+        O que deseja:
+        1 = adição
+        2 = subtração
+        3 = multiplacação
+        `);
+        user = parseInt(user)
+        switch(user){
+            case 1:
+            var n1 = prompt('Digite um valor:');
+            var n2 = prompt('Digite o 2º valor:');
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            var soma = n1 + n2;
+
+            alert(`O resultado é ${soma}`);
+            break;
+
+            case 2:
+            var n1 = prompt('Digite um valor:');
+            var n2 = prompt('Digite o 2º valor:');
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            var sub = n1 - n2;
+
+            alert(`O resultado é ${sub}`);
+            break;
+
+            case 3:
+            var n1 = prompt('Digite um valor:');
+            var n2 = prompt('Digite o 2º valor:');
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+            var mult = n1 * n2;
+
+            alert(`O resultado é ${mult}`);
+            break;
+        }
+    </script>
+</body>
+</html>

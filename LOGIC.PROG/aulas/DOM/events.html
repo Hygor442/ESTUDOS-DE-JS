@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn">Clique Aqui</button>
+
+    <div class="block">
+
+    </div>
+    <script>
+        //onload => ativado ao carregar a pagina;
+        /*
+        var body = document.querySelector("body");
+        window.onload = function(){
+            body.style.background = 'blue';
+            alert('Terminado')
+        }
+        */
+       //click and dblclick
+       /*
+        let btn = document.querySelector(".btn");
+        let body = document.querySelector("body");
+
+        let div = document.createElement("div");
+        let h1 = document.createElement("h1");
+        let title = document.createTextNode("Olá mundo!");
+
+        btn.addEventListener("click", function(){
+            body.appendChild(div);
+            div.appendChild(h1);
+            h1.appendChild(title);
+            body.style.background = '#fff';
+        });
+        btn.addEventListener("dblclick", function(){
+            body.removeChild(div);
+            body.style.background = 'red';
+        });
+        */
+       //mouserover and mouserout
+        let block = document.querySelector(".block");
+        block.addEventListener("mouseover", function(){
+            block.style.background = 'blue';
+        })
+        block.addEventListener("mouseout", function(){
+            block.style.background = 'gray';
+        });
+</script>
+</body>
+</html>

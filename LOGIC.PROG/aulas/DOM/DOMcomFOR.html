@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lista = ['Uva', 'Pera', 'Maçã', 'Salada'];
+
+        var listaUl = document.createElement('ul'); // cria o elemento
+        var body = document.getElementsByTagName('body');
+        body[0].appendChild(listaUl); // uni os elementos
+        var listaNoBody = document.getElementsByTagName('ul');
+
+        for(var i = 0; i < lista.length ; i++){
+            var li = document.createElement('li');
+            var txt = document.createTextNode(lista[i]); //cria o texto dos elementos
+            li.appendChild(txt);
+            listaUl.appendChild(li);
+        }
+    </script>
+</body>
+</html>

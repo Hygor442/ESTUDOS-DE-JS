@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="Calcular" onclick="Calcular()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function Calcular(){
+            var compCatOpost  = parseFloat(prompt('Comprimeto do cateto oposto'));
+            var compCatAdj = parseFloat(prompt('Comprimento do cateto adjacente'));
+            var hipo = Math.hypot(compCatOpost,compCatAdj);
+            var res = document.querySelector('#res');
+            res.innerHTML = `A hipotenusa vai medir ${hipo.toFixed(2)}`; 
+        }
+        
+    </script>
+</body>
+</html>

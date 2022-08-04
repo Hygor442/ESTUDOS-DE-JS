@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo de exemplo</h1>
+    <h2 id="subtitle">Titulo 2</h2>
+    <p id="paragrafo">Paragrafo de exemplo</p>
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <div id="container">
+        <p>testando</p>
+    </div>
+    <script>
+        //removendo elemento filho
+        var container = document.querySelector("#container");
+        var p = document.querySelector("#container p");
+        container.removeChild(p);
+        //removendo o elemento em si
+        var subtitle = document.querySelector('#subtitle');
+        subtitle.remove();
+    </script>
+</body>
+</html>

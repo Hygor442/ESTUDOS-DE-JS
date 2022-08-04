@@ -1,0 +1,43 @@
+Arrays:
+
+-Adicionar um valor:
+*adicionar um valor - var.push();
+*adicionar um valor no começo - var.unshift();
+
+-Remover um valor:
+*começo - var.shift();
+*final - var.pop();
+*remover pela posição do indice - var.splice(var, 1); // apos a virgula, a posição do item a ser removido;
+
+ex de remoção de item por indice:
+
+var vegetais = ['Repolho', 'Nabo', 'Rabanete', 'Cenoura'];
+console.log(vegetais);
+// ['Repolho', 'Nabo', 'Rabanete', 'Cenoura']
+
+var pos = 1, n = 2;
+
+var itensRemovidos = vegetais.splice(pos, n);
+// Isso é como se faz para remover itens, n define o número de itens a se remover,
+// a partir da posição (pos) em direção ao fim da array.
+
+console.log(vegetais);
+// ['Repolho', 'Cenoura'] (o array original é alterado)
+
+console.log(itensRemovidos);
+// ['Nabo', 'Rabanete']
+
+-Iterar um array - var.forEach(item, indice, array){};  //meio que cria uma função;
+
+-copiar um array - var = let.slice();
+
+
+
+MATRIZES E VETORES:
+-o array é um vetor que armazena valores;
+-a matriz é um array bidimensional;
+ex: 
+    var cesta  = ['uva','papel','água']; => vetor;
+    var boletim = [[8,9,6,10,5],[10,5,7,10,5]]; => matriz;
+
+//Ver matrizes e vetores; mais sobre objetos; função recursiva, memorização e callbacks;

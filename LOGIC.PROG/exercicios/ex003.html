@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="calcular" onclick="calcular()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function calcular(){
+            var largura = parseFloat(prompt('Digite a largura da parede'));
+            var altura = parseFloat(prompt('Digite a altura da parede'));
+
+            var resultado = document.querySelector('#res');
+            resultado.innerHTML = largura * altura  
+        }
+    </script>
+</body>
+</html>

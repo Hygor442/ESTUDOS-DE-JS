@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando valores</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container input[type = "number"]{
+            margin: 0 10px;
+        }
+        #btn{
+            margin: auto 0;
+        }
+        #res{
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="number" min="0" id="n1">
+        <label for="">+</label>
+        <input type="number" min="0" id="n2">
+        <label for="">=</label>
+        <div id="res"></div>
+    </div>
+    <button id="btn">Calcular</button>
+
+    <script>
+        let n1 = document.querySelector("#n1");
+        let n2 = document.querySelector("#n2");
+        let res = document.querySelector("#res");
+        let btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", function(){
+            n1Value = Number(n1.value);
+            n2Value = Number(n2.value);
+            
+            let soma = n1Value + n2Value;
+
+            res.textContent = soma;
+        });
+    </script>
+</body>
+</html>

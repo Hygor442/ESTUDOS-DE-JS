@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="button" value="Roletar" onclick="roletar()">
+        <div id="res"></div>
+    </div>
+    <script>
+        let lista = [];
+        let res = document.getElementById('res');
+        
+        function roletar(){ // Essa parte vai adicionar os itens dentro do array => OBS: lembrar de que se for colocar a variavel detro de um looping, colocar tbm a implementação do array;
+        
+            for(i = 0; i<= 4; i++){
+                let nome = prompt(`nome do ${[i+1]}º`);
+
+                if(nome.length == 0){
+                    alert('Digite um nome');
+                    nome = prompt('nome');
+                };
+
+                lista.push(nome);
+                alert(`Nome ${nome} adicionado`);
+            }//Aqui vai sortear os itens
+            let sortear = lista[Math.ceil(Math.random() * (lista.length -1))];
+            alert(sortear);
+        }
+    </script>
+</body>
+</html>

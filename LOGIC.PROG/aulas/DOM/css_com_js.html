@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title{
+            color: blue !important;
+        }
+        .atribute{
+            color: brown;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Titulo de exemplo</h1>
+    <h2 id="subtitle">Segundo Titulo</h2>
+    <p id="paragrafo">Paragrafo de exemplo</p>
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <div id="container">
+        <p>testando</p>
+    </div>
+
+    <script>
+        //seliciona o elemento
+        var title = document.querySelector("#title");
+        var subtitle = document.querySelector("#subtitle");
+        //adiciona o estilo
+        title.style.color = 'red';
+
+        //adicionar attr
+        subtitle.setAttribute("class", "atribute");
+    </script>
+</body>
+</html>

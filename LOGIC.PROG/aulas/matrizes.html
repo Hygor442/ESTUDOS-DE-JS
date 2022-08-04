@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var linhas  = prompt('Digite o número de linhas:');
+        var colunas  = prompt('Digite o número de colunas:');
+
+        var matriz2 = [];
+            for(var i = 0; i < linhas; i++){
+                matriz2[i] = [];
+                for(var c = 0; c<colunas;c++){
+                    matriz2[i][j] = '';
+                };
+            };
+        
+        for(var l = 0; l<linhas; l++){
+            for(var k = 0; k<colunas; k++){
+                matriz2[l][k] = prompt('Digite um valor para inserir na matriz');
+            };
+        };
+
+        var valores = '';
+        for(var l = 0; l<linhas;l++){
+            for(var k = 0; k<colunas;k++){
+                if(k < colunas - 1){
+                    valores += matriz2[l][k] + "\t\t";
+                }else{
+                    valores += matriz2[l][k] +"\n";
+                };
+            };
+        };
+        alert(valores);
+    </script>
+</body>
+</html>

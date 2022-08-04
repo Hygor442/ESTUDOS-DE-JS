@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo de exemplo</h1>
+    <p id="paragrafo">Paragrafo de exemplo</p>
+    <ul id="lista">
+        <li class="item">Item1</li>
+        <li class="item">Item2</li>
+        <li class="item">Item3</li>
+    </ul>
+    <div id="container">
+
+    </div>
+    <script>
+        var novoParagrafo = document.createElement("p");
+        var texto = document.createTextNode("Este é o conteudo do paragrafo");
+        novoParagrafo.appendChild(texto);
+        var body = document.querySelector("body");
+        body.appendChild(novoParagrafo);
+
+        var container = document.getElementById('container');
+        var el = document.createElement("span");
+        el.appendChild(document.createTextNode('Texto dentro do conteiner'));
+        container.appendChild(el);
+
+        //adicionando elementos
+        var elem = document.createElement('div');
+        elem.classList = 'div-criada'; // adiciona as classes 
+        txtElem = document.createTextNode('Ola,mundo');
+        elem.appendChild(txtElem);
+        body.appendChild(elem);
+        console.log(elem);
+
+
+        //insereBefore - insere antes
+        var elem2 = document.createElement('div');
+        elem2.classList = 'blu';
+        txtElem2 = document.createTextNode('Essa é para ser a caixa azul');
+        elem2.appendChild(txtElem2);
+        var elem3 = document.querySelector('#container .div-criada');
+        container.insertBefore(elem2, elem3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var frase = 'Em casa de ferreiro espeto de pau'
+        //lenght => numero de itens ou 'largura do objeto'
+        console.log(frase.length);
+        //indexOf => da a posição do 1º item em um indice
+        console.log(frase.indexOf('pau'));
+        //slice => remove o item pelo indice
+        console.log(frase.slice(30,33));
+        //replace => troca os itens 
+        var fraseNova = frase.replace('pau', 'plastico')
+        console.log(fraseNova);
+        //toLowerCase e toUpperCase => deixa o texto em minuscula e maiuscula respectivamente
+        console.log(frase.toLowerCase())
+        console.log(frase.toUpperCase())
+        //trim => remove espaços inuteis
+        var espaço = '    Item     '
+        console.log(espaço);
+        console.log(espaço.trim());
+        //split => transforma os itens em arrays
+        console.log(frase.split(" "));
+        //lastIndexof => mostra a ultima aparição do que foi procurado
+        var teste = 'Tete gosta olhacom Tete ta bonita';
+        console.log(teste.lastIndexOf("Tete"));
+    </script>
+</body>
+</html>

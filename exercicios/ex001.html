@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>As frutas na caixa:</h2>
+        <div class="res"></div>
+        <input type="button" value="remover" onclick="tirar()">
+        <input type="button" value="finalizar" onclick="end()">
+    </div>
+    <script>
+        const res = document.querySelector('.res');
+
+        let escolha = prompt('Deseja algo?');
+
+        if(escolha.length == 0){
+            alert('INFORME CORRETAMENTE!');
+            let escolha = prompt('Deseja algo?');
+        }
+
+        let caixa = [];
+
+        while(escolha == 'sim'){
+            let novo = prompt('Qual a fruta?');
+
+            if(novo.length == 0){
+                alert("INSIRA UM ITEM!");
+                let novo = prompt('Qual a fruta?');
+            }
+
+            caixa.push(novo);
+
+            let escolha = prompt('Algo mais?');
+
+            if(escolha.length == 0){
+            alert('INFORME CORRETAMENTE!');
+            let escolha = prompt('Algo mais?');
+            }
+
+            if(escolha == 'não'){
+                break;
+            }
+        }
+        
+        for(let index = 0; index < caixa.length; index++){
+            res.innerHTML += (`${index+1}. ${caixa[index]} <br>`);
+        };
+
+
+        function tirar(){
+            let remover = parseInt(prompt('Qual item a ser removido:'))
+            caixa.splice(remover-1,1);//vai remover o item na posição x
+            res.innerHTML = '';
+            for(let i = 0; i < caixa.length; i++){
+                res.innerHTML += (`${i+1}. ${caixa[i]} <br>`)
+            }
+        }
+
+        function end(){
+            res.innerHTML += (`O total de frutas compradas: ${caixa.length}. <br> Volte sempre!`);
+        }
+
+    </script>
+</body>
+</html>
