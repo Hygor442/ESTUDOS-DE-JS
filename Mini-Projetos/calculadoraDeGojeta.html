@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora de gorjetas</title>
+    <link rel="stylesheet" href="CSS/gorjetas.css">
+</head>
+<body>
+    <div id="container">
+        <div id="container-header">
+            <h1>Calculadora de gorjetas</h1>
+            <div class="circle">$</div>
+        </div>
+        <div id="calculator">
+            <form action="">
+                <p>Valor do serviço:</p>
+                R$ <input type="text" id="total-conta" placeholder="Total da conta">
+                <p>Valor da gorjeta:</p>
+                <select id="taxa-servico">
+                    <option disabled selected value="0">Defina a Taxa</option>
+                    <option value="0.3">30% - Taxa de serviço  ótima + Cover</option>
+                    <option value="0.2">20% - Taxa de serviço + Cover</option>
+                    <option value="0.15">15% - Taxa de serviço excelente</option>
+                    <option value="0.1">10% - Taxa de serviço boa</option>
+                    <option value="0.05">5% - Taxa de serviço ruim</option>
+                </select>
+            <p>Quantas pessoas vão dividir a conta?</p>
+            <input type="text" id="num-pessoas" placeholder="número de pessoas">
+            </form>
+            
+        </div>
+        <div id="valor-calculado">
+            <sup>R$</sup><span id="valor-pessoa"></span>
+            <small id="each">cada</small>
+        </div>
+
+        <button>Calcular</button>
+    </div>
+
+    <script src="JS/calculadoraDeGorjetas.js"></script>
+</body>
+</html>

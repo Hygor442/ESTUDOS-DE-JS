@@ -1,0 +1,117 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to left, #0f9dc7, #0df1f1);
+}
+#container{
+    height: auto;
+    width: 400px;
+    margin: 3% auto;
+    padding: 0 0 2% 0;
+    background: #f7f7f7;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+#container-header{
+    background: #1b251e;
+    margin: 0;
+    padding: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#container-header h1{
+    color: white;
+    padding: 10px 25px 0 0;
+    font-size: 21px;
+    font-weight: normal;
+}
+#container-header .circle{
+    height:75px;
+    width:75px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    padding-left: 20px;
+}
+form input[type="text"]{
+    width: 50%;
+    height: 30px;
+    border: 1px solid #0f9dc7;
+}
+input{
+    padding-left: 20px;
+    margin-left: 20px;
+}
+input:focus{
+    outline: none;
+}
+input:nth-child(2){
+    margin-left: 0;
+}
+input::placeholder{
+    font-size: 15px;
+}
+form select{
+    margin-left: 20px;
+}
+
+#valor-calculado {
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: center;
+    position: relative;
+}
+
+#valor-calculado:before {
+    content: "Valor por pessoa:";
+    margin-top: 20px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
+
+#valor-calculado sup {
+    font-size: 16px;
+    position: absolute;
+    left: 155px;
+    top: 18px;
+}
+
+#valor-calculado small {
+    font-size: 16px;
+    display: block;
+}
+button{
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    background: #0ab7e2;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+button:hover{
+    background: #fff;
+    color: #0ab7e2;
+    border: 2px solid #0ab7e2;
+}
+button:active{
+    transform: scale(1.01);
+}

@@ -1,0 +1,51 @@
+let arr1 = [1,2,3];
+let arr2 = [4,5,6,"A","B","B"];
+
+//Concatenação
+let arrFinal = arr1.concat(arr2);
+//every
+let everX = arrFinal.every(
+    function verifyElements(elem, ind, obj){
+        return(typeof elem == "number");
+    }
+);
+
+//filter
+ let filterX = arrFinal.filter(
+    function verifyElements(elem,ind,obj){
+        return (typeof elem == "string");
+    }  
+);                       
+        
+//ForEach
+let data = "";
+let forEachX = arrFinal.forEach(
+    function verifyElements(elem,ind,obj){
+    data += `Indice ${ind} : ${elem}\n`;
+}
+);
+
+//IndexOf
+let indexOfX = arrFinal.indexOf(3)
+
+//Last Index Of
+let lastIndexOfX = arrFinal.lastIndexOf("B");
+
+//Join
+let joinX = arrFinal.join('-')
+
+//Map e Push
+let mapFinal = [];
+let mapX = arrFinal.map(
+    function verifyElements(elem, ind, obj){
+        if(typeof elem == "number"){
+            mapFinal.push(elem * 2);
+        }
+        else{
+            mapFinal.push(elem);
+        }
+    }
+);
+
+console.log(arrFinal);
+console.log(mapFinal);
