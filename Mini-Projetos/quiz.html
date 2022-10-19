@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="CSS/quiz.css">
+</head>
+<body>
+    <main class="tela-principal">
+        <section class="conteudos">
+            <h1>Dev Quiz</h1>
+            <article class="centro" id="instrucoes">
+                Leia a questão e clique na resposta correta
+            </article>
+            <article class="questoes">
+                <header class="questao">
+                    <span id="numQuestao"></span>
+                    <h2 id="pergunta"></h2>
+                </header>
+                <div class="corpo">
+                    <ol id="alternativas">
+                        <li id="a" class="respostas" value="1A" onclick="verificarSeAcertou(this,this)""></li>
+                        <li id="b" class="respostas" value="1B" onclick="verificarSeAcertou(this,this)"></li>
+                        <li id="c" class="respostas" value="1C" onclick="verificarSeAcertou(this,this)"></li>
+                    </ol>
+                </div>
+            </article>
+            <article id="aviso">
+                Questão <span id="numero"></span> de <span id="total"></span>
+            </article>
+        </section>
+    </main>
+    <script src="JS/quiz.js"></script>
+</body>
+</html>

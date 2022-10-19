@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+    background: rgb(249,112,59);
+    background: linear-gradient(
+    90deg, 
+    rgba(249,112,59,1) 0%, 
+    rgba(248,83,19,1) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#titulo{
+    margin-bottom: 40px;
+    font-size: 25px;
+    color: #fff;
+}
+
+#container__secundario{
+    width: 700px;
+    padding: 30px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 9px -11px 12px -2px rgba(0,0,0,0.75);
+}
+
+#container__input{
+    width: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+}
+
+#container__input::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-top: 2px solid rgba(56, 53, 53, 0.4);
+    margin-top: 70px;
+    height: 10px;
+    border-radius: 30px;
+}
+
+#container__inputtxt{
+    outline: none;
+    border: 1px solid black;
+    width: 80%;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#container__btn{
+    width: 20%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f85313;
+    margin-left: 5px;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3 ease-in;
+}
+
+#container__btn:hover{
+    background-color: #f17240;
+}
+
+#container__palavra{
+    color: #f85313;
+    margin-bottom: 10px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+#container__significado{
+    color: black;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+span{
+    font-size: 20px;
+    color: #f85313;
+}

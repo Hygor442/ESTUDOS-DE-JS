@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moeda</title>
+    <link rel="stylesheet" href="CSS/conversorDeMoeda.css">
+</head>
+<body>
+    <main id="tela-principal">
+        <h1>Conversor de Moedas</h1>
+        <section class="conteudos">
+            <form class="form-group">
+                <label for="valorEmReal">R$</label>
+                <input 
+                type="number" 
+                name="valorEmReal" 
+                id="valorEmReal" 
+                class="input" 
+                step="0.01" 
+                min="0" 
+                value="" 
+                tabindex="1" 
+                onclick="ativarBotao()" 
+                onchange="ativarBotao()" 
+                autofocus 
+                required>
+            </form>
+
+            <form class="form-group">
+                <input 
+                type="radio" 
+                name="moedaEstrangeira" 
+                id="dolar"
+                class="input radio"
+                value="Dolar"
+                tabindex="2">
+                <label for="dolar">Dolar</label>
+
+                <input 
+                type="radio" 
+                name="moedaEstrangeira" 
+                id="euro"
+                class="input radio"
+                value="Euro"
+                tabindex="3">
+                <label for="euro">Euro</label>
+
+                <input 
+                type="radio" 
+                name="moedaEstrangeira" 
+                id="libra"
+                class="input radio"
+                value="Libra"
+                tabindex="4">
+                <label for="libra">Libra</label>
+
+                <input 
+                type="radio" 
+                name="moedaEstrangeira" 
+                id="bitcoins"
+                class="input radio"
+                value="Bitcoins"
+                tabindex="5">
+                <label for="bitcoins">Bitcoins</label>
+            </form>
+
+            <form class="form-group">
+                <button 
+                class="desativado btn" 
+                id="btnConverter" 
+                onclick="ativarBotao(); bloquerBotao()" disabled>Converter</button>
+                <button
+                type="reset"
+                class="btn"
+                id="btnLimpar"
+                tabindex="7">Limpar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="JS/conversorDeMoeda.js"></script>
+</body>
+</html>
